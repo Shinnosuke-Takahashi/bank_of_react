@@ -53,9 +53,15 @@ class App extends Component {
     // send to debits view via props
   }
 
+  // create new credit and add to array
+  addCredit = (e) => {
+    // send to creduts view via props
+  }
+
   render() {
 
     const {debits} = this.state;
+    const {credits} = this.state;
 
     const HomeComponent = () => (<Home accountBalance={this.state.accountBalance}/>);
     const UserProfileComponent = () => (
@@ -63,12 +69,14 @@ class App extends Component {
     );
     const LogInComponent = () => (<LogIn user={this.state.currentUser} mockLogIn={this.mockLogIn} />);
     const DebitsComponent = () => (<Debits addDebit={this.addDebit} debits={debits}/>)
+    const CreditsComponent = () => (<Credits addCredit={this.addCredit} creduts={credits}/>)
 
     return (
         <Router>
           <div>
             <Route exact path="/" render={HomeComponent}/>
             <Route exact path="/Debits" render={DebitsComponent}/>
+            <Route exact path="/Credits" render={CreditsComponent}/>
             <Route exact path="/userProfile" render={UserProfileComponent}/>
             <Route exact path="/login" render={LogInComponent}/>
           </div>
