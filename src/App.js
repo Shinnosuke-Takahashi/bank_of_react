@@ -29,6 +29,16 @@ class App extends Component {
     newUser.userName = logInInfo.userName
     this.setState({currentUser: newUser})
   }
+  
+  // create new debit and add to array
+  addDebit = (e) => {
+    // send to debits view via props
+  }
+  
+  // create new credit and add to array
+  addCredit = (e) => {
+    // send to credits view via props
+  }
 
   // aynchronous component
   async componentDidMount() {
