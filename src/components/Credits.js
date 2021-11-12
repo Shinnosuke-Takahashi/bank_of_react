@@ -19,12 +19,10 @@ const Credits = (props) => {
             <h1></h1>
             <Link to="/LogIn">Log In</Link>
             <h1></h1>
-            <Link to="Credits">Credits</Link>
+            <Link to="Debits">Debits</Link>
             <h1></h1>
             <Link to="/">Return to Home</Link>
-            <h1></h1>
-
-            
+            <h1></h1>    
         </div>
     )
 }
