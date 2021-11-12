@@ -73,7 +73,7 @@ class App extends Component {
 
     return (
         <Router>
-          <div>
+          <div className="App">
             <Route exact path="/" render={HomeComponent}/>
             <Route exact path="/Debits" render={DebitsComponent}/>
             <Route exact path="/Credits" render={CreditsComponent}/>
