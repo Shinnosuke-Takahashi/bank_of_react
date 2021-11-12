@@ -29,6 +29,10 @@ const Debits = (props) => {
 
 class DebitsComponent extends Component {
     render() {
+        // create new debit and add to array
+        // addDebit = (e) => {
+        // send to debits view via props
+        // }
         return (
             <div></div>
         )

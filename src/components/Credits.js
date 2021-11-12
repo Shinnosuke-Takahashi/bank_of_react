@@ -27,4 +27,16 @@ const Credits = (props) => {
     )
 }
 
+class DebitsComponent extends Component {
+    render() {
+        // create new credit and add to array
+        // addCredit = (e) => {
+        // send to creits view via props
+        // }
+        return (
+            <div></div>
+        )
+    }
+}
+
 export default Credits;
