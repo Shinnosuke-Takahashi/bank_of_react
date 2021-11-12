@@ -65,11 +65,11 @@ class App extends Component {
 
     const HomeComponent = () => (<Home accountBalance={this.state.accountBalance}/>);
     const UserProfileComponent = () => (
-        <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}  />
+        <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}  accountBalance={this.state.accountBalance}/>
     );
     const LogInComponent = () => (<LogIn user={this.state.currentUser} mockLogIn={this.mockLogIn} />);
     const DebitsComponent = () => (<Debits addDebit={this.addDebit} debits={debits}/>)
-    const CreditsComponent = () => (<Credits addCredit={this.addCredit} creduts={credits}/>)
+    const CreditsComponent = () => (<Credits addCredit={this.addCredit} credits={credits}/>)
 
     return (
         <Router>
