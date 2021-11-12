@@ -55,7 +55,7 @@ class App extends Component {
 
   // create new credit and add to array
   addCredit = (e) => {
-    // send to creduts view via props
+    // send to credits view via props
   }
 
   render() {
