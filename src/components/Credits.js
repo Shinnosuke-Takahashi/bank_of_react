@@ -23,8 +23,6 @@ const Credits = (props) => {
             <h1></h1>
             <Link to="/">Return to Home</Link>
             <h1></h1>
-
-            
         </div>
     )
 }
