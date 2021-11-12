@@ -14,27 +14,40 @@ const Credits = (props) => {
         <div>
             <h1> Credits </h1>
             {creditsView()}
-
-            <Link to="/userProfile">User Profile</Link>
-            <h1></h1>
-            <Link to="/LogIn">Log In</Link>
-            <h1></h1>
-            <Link to="/Debits">Debits</Link>
-            <h1></h1>
-            <Link to="/">Return to Home</Link>
-            <h1></h1>
+            <AccountBalance accountBalance={props.accountBalance}/>
+            <CreditsComponent/>
         </div>
     )
 }
 
-class DebitsComponent extends Component {
+class CreditsComponent extends Component {
     render() {
-        // create new credit and add to array
-        // addCredit = (e) => {
-        // send to creits view via props
-        // }
         return (
-            <div></div>
+            <div>
+                <Link to="/userProfile">User Profile</Link>
+                <h1></h1>
+                <Link to="/LogIn">Log In</Link>
+                <h1></h1>
+                <Link to="/Debits">Debits</Link>
+                <h1></h1>
+                <Link to="/">Return to Home</Link>
+                <h1></h1>
+
+                <h1></h1>
+                <form>
+                    <label>
+                        Description:
+                        <input/>
+                    </label>
+                    
+                    <label>
+                        Amount:
+                        <input/>
+                    </label>
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+
         )
     }
 }
