@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 
 const Debits = (props) => {
     let debitsView = () => {
-
         const { debits } = props;
         return debits.map((debit) => {
             let date = debit.date.slice(0,10);

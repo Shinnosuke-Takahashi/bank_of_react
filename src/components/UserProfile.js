@@ -10,7 +10,6 @@ class UserProfile extends Component {
 
           <div>Username: {this.props.userName}</div>
           <div>Member Since: {this.props.memberSince}</div>
-          <Link to="/userProfile">User Profile</Link>
           <h1></h1>
           <Link to="/LogIn">Log In</Link>
           <h1></h1>
