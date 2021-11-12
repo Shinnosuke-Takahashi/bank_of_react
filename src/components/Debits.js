@@ -19,12 +19,24 @@ const Debits = (props) => {
             <h1></h1>
             <Link to="/LogIn">Log In</Link>
             <h1></h1>
-            <Link to="Credits">Credits</Link>
+            <Link to="/Credits">Credits</Link>
             <h1></h1>
             <Link to="/">Return to Home</Link>
             <h1></h1>  
         </div>
     )
+}
+
+class DebitsComponent extends Component {
+    render() {
+        // create new debit and add to array
+        // addDebit = (e) => {
+        // send to debits view via props
+        // }
+        return (
+            <div></div>
+        )
+    }
 }
 
 export default Debits;

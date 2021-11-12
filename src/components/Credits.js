@@ -39,6 +39,7 @@ class CreditsComponent extends Component {
                         Description:
                         <input/>
                     </label>
+                    
                     <label>
                         Amount:
                         <input/>

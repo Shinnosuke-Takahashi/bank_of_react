@@ -48,16 +48,6 @@ class App extends Component {
     this.setState({debits, credits, accountBalance});
   }
 
-  // create new debit and add to array
-  addDebit = (e) => {
-    // send to debits view via props
-  }
-
-  // create new credit and add to array
-  addCredit = (e) => {
-    // send to credits view via props
-  }
-
   render() {
 
     const {debits} = this.state;
