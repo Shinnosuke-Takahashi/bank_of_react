@@ -27,7 +27,8 @@ class CreditsComponent extends Component {
         this.state = {
             credit: {
                 description: '',
-                amount: 0
+                amount: 0,
+                date: ''
             },
         }
     }
@@ -45,7 +46,7 @@ class CreditsComponent extends Component {
         e.preventDefault()
         this.props.addCredit(this.state.credit)
     }
-        
+
     render() {
         return (
             <div>
