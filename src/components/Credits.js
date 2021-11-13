@@ -20,7 +20,30 @@ const Credits = (props) => {
     )
 }
 
+handleChange = (e) => {
+    const updatedCredit = {...this.state.credit}
+    const inputField = e.target.name
+    const inputValue = e.target.value
+    updatedCredit[inputField] = inputValue
+
+    this.setState({credit: updatedCredit})
+}
+
+handleSubmit  = (e) => {
+    e.preventDefault()
+    this.props.addCredit(this.state.credit)
+}
+
 class CreditsComponent extends Component {
+    constructor () {
+        super()
+        this.state = {
+            credit: {
+                description: '',
+                amount: 0
+            },
+        }
+    }
     render() {
         return (
             <div>
@@ -34,17 +57,16 @@ class CreditsComponent extends Component {
                 <h1></h1>
 
                 <h1></h1>
-                <form>
-                    <label>
-                        Description:
-                        <input/>
-                    </label>
-                    
-                    <label>
-                        Amount:
-                        <input/>
-                    </label>
-                    <input type="submit" value="Submit" />
+                <form onSubmit={this.handleSubmit}>
+                    <div>
+                    <label htmlFor="description"> Description: </label>
+                        <input type="text" name="description" onChange={this.handleChange} value={this.state.credit.description} />
+                    </div>
+                    <div>
+                    <label htmlFor="amount"> Amount: </label>
+                        <input type="text" name="amount"/>
+                    </div>
+                    <button>Submit</button>
                 </form>
             </div>
 
