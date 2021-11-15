@@ -5,7 +5,7 @@ Prof. Melissa Lynch - Section 1 Fall 2021
 
 # Contributors:
 Ashley Gong - ashleyg101  
-Haley Robinson - Hayley Robin  
+Hayley Robinson - hayleyrobin 
 Shinnosuke Takahashi - Shinnosuke-Takahashi
 
 # Objectives 
