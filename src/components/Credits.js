@@ -2,25 +2,25 @@ import React, {Component} from 'react';
 import AccountBalance from './AccountBalance';
 import {Link} from 'react-router-dom';
 
-const Credits = (props) => {
-    let creditsView = () => {
-        const { credits } = props;
-        return credits.map((credit) => {
-            let date  = credit.date.slice(0,10);
-            return  <li key={credit.id}>{credit.amount} {credit.description} {date}</li>
-        })
-    }
+// const Credits = (props) => {
+//     let creditsView = () => {
+//         const { credits } = props;
+//         return credits.map((credit) => {
+//             let date  = credit.date.slice(0,10);
+//             return  <li key={credit.id}>{credit.amount} {credit.description} {date}</li>
+//         })
+//     }
 
    
-    return (
-        <div>
-            <h1> Credits </h1>
-            {creditsView()}
-            <AccountBalance accountBalance={props.accountBalance}/>
-            <CreditsComponent addCredit={props.addCredit}/>
-        </div>
-    )
-}
+//     return (
+//         <div>
+//             <h1> Credits </h1>
+//             {creditsView()}
+//             <AccountBalance accountBalance={props.accountBalance}/>
+//             <CreditsComponent addCredit={props.addCredit}/>
+//         </div>
+//     )
+// }
 
 
 class CreditsComponent extends Component {
@@ -28,12 +28,20 @@ class CreditsComponent extends Component {
         super()
         this.state = {
             credit: {
-                description: '',
+                id: 'NAAAAH',
                 amount: 0,
                 date: 'FILL ME',
-                id: 'NAAAAH'
+                description: '',
             },
         }
+    }
+
+    creditsView = () => {
+        const { credits } = this.props;
+        return credits.map((credit) => {    
+            let date = credit.date.slice(0,10);
+            return <li key={credit.id}>{credit.amount} {credit.description} {date}</li>
+        })
     }
 
     handleChange = (e) => {
@@ -54,6 +62,12 @@ class CreditsComponent extends Component {
     render() {
         return (
             <div>
+                <h1> Credits </h1>
+                {this.creditsView()}
+                <h1/>
+                <AccountBalance accountBalance={this.props.accountBalance}/>
+                <h1/>
+
                 <Link to="/userProfile">User Profile</Link>
                 <h1></h1>
                 <Link to="/LogIn">Log In</Link>
@@ -71,7 +85,7 @@ class CreditsComponent extends Component {
                     </div>
                     <div>
                     <label htmlFor="amount"> Amount: </label>
-                        <input type="text" name="amount"/>
+                        <input type="text" name="amount" onChange={this.handleChange} value={this.state.credit.amount} />
                     </div>
                     <button>Submit</button>
                 </form>
@@ -81,4 +95,4 @@ class CreditsComponent extends Component {
     }
 }
 
-export default Credits;
+export default CreditsComponent;
