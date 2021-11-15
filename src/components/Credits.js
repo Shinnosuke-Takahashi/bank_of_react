@@ -10,12 +10,14 @@ const Credits = (props) => {
             return  <li key={credit.id}>{credit.amount} {credit.description} {date}</li>
         })
     }
+
+   
     return (
         <div>
             <h1> Credits </h1>
             {creditsView()}
             <AccountBalance accountBalance={props.accountBalance}/>
-            <CreditsComponent/>
+            <CreditsComponent addCredit={props.addCredit}/>
         </div>
     )
 }
@@ -28,7 +30,8 @@ class CreditsComponent extends Component {
             credit: {
                 description: '',
                 amount: 0,
-                date: 'FILL ME'
+                date: 'FILL ME',
+                id: 'NAAAAH'
             },
         }
     }
@@ -43,14 +46,9 @@ class CreditsComponent extends Component {
     }
     
     handleSubmit  = (e) => {
-        e.preventDefault()
-        let addMe = {
-            'amount': this.state.credit.amount,
-            'date': this.state.credit.date,
-            'description': this.state.credit.description,
-            'id': 'blahblah'
-        };
-        this.props.addCredit(addMe)
+        e.preventDefault();
+        this.props.addCredit(this.state.credit);
+        this.setState({date : Date()})
     }
 
     render() {

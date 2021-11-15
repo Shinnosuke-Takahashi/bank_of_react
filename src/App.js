@@ -37,10 +37,13 @@ class App extends Component {
   
   // create new credit and add to array
   addCredit = (e) => {
-    const newCreditsArr = this.state.credits
-    newCreditsArr.push(e);
-    this.credit.setState(newCreditsArr);
-    // send to credits view via props
+    let addMe = {
+      'amount': e.amount,
+      'date': e.date,
+      'description': e.description,
+      'id': e.id,
+    }
+    this.setState({credits: addMe})
   }
 
   // aynchronous component
