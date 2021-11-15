@@ -28,6 +28,7 @@ class App extends Component {
     const newUser = {...this.state.currentUser}
     newUser.userName = logInInfo.userName
     this.setState({currentUser: newUser})
+    this.componentDidMount()
   }
   
   // create new debit and add to array
