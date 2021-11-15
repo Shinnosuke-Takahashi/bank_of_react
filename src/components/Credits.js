@@ -28,7 +28,7 @@ class CreditsComponent extends Component {
             credit: {
                 description: '',
                 amount: 0,
-                date: ''
+                date: 'FILL ME'
             },
         }
     }
@@ -44,7 +44,13 @@ class CreditsComponent extends Component {
     
     handleSubmit  = (e) => {
         e.preventDefault()
-        this.props.addCredit(this.state.credit)
+        let addMe = {
+            'amount': this.state.credit.amount,
+            'date': this.state.credit.date,
+            'description': this.state.credit.description,
+            'id': 'blahblah'
+        };
+        this.props.addCredit(addMe)
     }
 
     render() {

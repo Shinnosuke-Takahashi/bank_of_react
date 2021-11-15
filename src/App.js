@@ -37,9 +37,9 @@ class App extends Component {
   
   // create new credit and add to array
   addCredit = (e) => {
-    const newCredit = {...this.state.credits}
-    newCredit.push(e)
-    this.setState({credits: newCredit})
+    const newCreditsArr = this.state.credits
+    newCreditsArr.push(e);
+    this.credit.setState(newCreditsArr);
     // send to credits view via props
   }
 
