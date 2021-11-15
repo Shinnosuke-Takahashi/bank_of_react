@@ -42,8 +42,10 @@ class App extends Component {
     };
 
     newDebits.push(addMe);
+    let addAmount = Number(this.state.accountBalance) - Number(e.amount);
     
     this.setState({debits: newDebits})
+    this.setState({accountBalance: addAmount})
   }
   
   // create new credit and add to array
@@ -59,7 +61,10 @@ class App extends Component {
 
     newCredits.push(addMe);
     
+    let addAmount = Number(this.state.accountBalance) + Number(e.amount);
+
     this.setState({credits: newCredits})
+    this.setState({accountBalance: addAmount})
   }
 
   // aynchronous component
