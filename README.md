@@ -5,7 +5,7 @@ Prof. Melissa Lynch - Section 1 Fall 2021
 
 # Contributors:
 Ashley Gong - ashleyg101  
-Haley Robinson - Hayley Robin
+Haley Robinson - Hayley Robin  
 Shinnosuke Takahashi - Shinnosuke-Takahashi
 
 # Objectives 
@@ -20,3 +20,4 @@ Shinnosuke Takahashi - Shinnosuke-Takahashi
 - [x] add credit or debit
 - [x] display credits and debits
 - [x] display updated account balance
+- [x] reset when new user logins
