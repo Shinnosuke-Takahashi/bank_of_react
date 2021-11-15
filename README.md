@@ -13,8 +13,10 @@ Shinnosuke Takahashi - Shinnosuke-Takahashi
 - Add client-side routing to our React apps using React Router
 - Set up React Router to enable common browser behavior
 
-
+# features
 - [x] state containing accountBalance (number), currentUser (object), debits (array), and credits (array)
 - [x] addCredit and addDebit - update state based on user input
 - [x] lifecycle method componentDidMount()
-
+- [x] add credit or debit
+- [x] display credits and debits
+- [x] display updated account balance
