@@ -37,7 +37,7 @@ class App extends Component {
   
   // create new credit and add to array
   addCredit = (e) => {
-    let newCredits = {...this.state.credits}
+    let newCredits = [...this.state.credits]
 
     let addMe = {
       'id': e.id,

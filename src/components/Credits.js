@@ -28,10 +28,10 @@ class CreditsComponent extends Component {
         super()
         this.state = {
             credit: {
-                id: 'NAAAAH',
+                id: 'NEW',
                 amount: 0,
                 date: 'FILL ME',
-                description: '',
+                description: 'DESCRIPTION',
             },
         }
     }
@@ -49,14 +49,15 @@ class CreditsComponent extends Component {
         const inputField = e.target.name
         const inputValue = e.target.value
         updatedCredit[inputField] = inputValue
-    
+        let rightNow = new Date()
+        updatedCredit['date'] = rightNow.toISOString()
         this.setState({credit: updatedCredit})
     }
     
     handleSubmit  = (e) => {
         e.preventDefault();
+
         this.props.addCredit(this.state.credit);
-        this.setState({date : Date()})
     }
 
     render() {
@@ -81,11 +82,11 @@ class CreditsComponent extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <div>
                     <label htmlFor="description"> Description: </label>
-                        <input type="text" name="description" onChange={this.handleChange} value={this.state.credit.description} />
+                        <input type="text" name="description" onChange={this.handleChange}/>
                     </div>
                     <div>
                     <label htmlFor="amount"> Amount: </label>
-                        <input type="text" name="amount" onChange={this.handleChange} value={this.state.credit.amount} />
+                        <input type="text" name="amount" onChange={this.handleChange}/>
                     </div>
                     <button>Submit</button>
                 </form>
