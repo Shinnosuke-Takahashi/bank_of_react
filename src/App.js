@@ -32,7 +32,18 @@ class App extends Component {
   
   // create new debit and add to array
   addDebit = (e) => {
-    // send to debits view via props
+    let newDebits = [...this.state.debits]
+
+    let addMe = {
+      'id': e.id,
+      'amount': e.amount,
+      'date': e.date,
+      'description': e.description
+    };
+
+    newDebits.push(addMe);
+    
+    this.setState({debits: newDebits})
   }
   
   // create new credit and add to array
@@ -79,7 +90,7 @@ class App extends Component {
         <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}  accountBalance={this.state.accountBalance}/>
     );
     const LogInComponent = () => (<LogIn user={this.state.currentUser} mockLogIn={this.mockLogIn} />);
-    const DebitsComponent = () => (<Debits addDebit={this.addDebit} debits={debits}/>)
+    const DebitsComponent = () => (<Debits addDebit={this.addDebit} debits={debits} accountBalance={this.state.accountBalance}/>)
     const CreditsComponent = () => (<Credits addCredit={this.addCredit} credits={credits} accountBalance={this.state.accountBalance}/>)
 
     return (
