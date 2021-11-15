@@ -52,7 +52,7 @@ class DebitsComponent extends Component {
                 <h1></h1>
                 <Link to="/LogIn">Log In</Link>
                 <h1></h1>
-                <Link to="/Debits">Debits</Link>
+                <Link to="/Credits">Credits</Link>
                 <h1></h1>
                 <Link to="/">Return to Home</Link>
                 <h1></h1>
